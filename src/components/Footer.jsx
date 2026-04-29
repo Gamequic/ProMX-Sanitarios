@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <img src="/logo.jpg" alt="ProMx Sanitarios" style={{ width: 52, height: 52, borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--orange)' }} />
+              <img src={import.meta.env.BASE_URL + 'logo.jpg'} alt="ProMx Sanitarios" style={{ width: 52, height: 52, borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--orange)' }} />
 
               <div style={{ lineHeight: 1.1 }}>
                 <span style={{ fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 800, fontSize: 20, color: '#fff', display: 'block' }}>ProMX</span>

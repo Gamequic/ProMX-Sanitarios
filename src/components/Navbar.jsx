@@ -40,7 +40,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
             <img
-              src="/logo.jpg"
+              src={import.meta.env.BASE_URL + 'logo.jpg'}
               alt="ProMx Sanitarios"
               style={{
                 height: 52, width: 52, borderRadius: '50%',

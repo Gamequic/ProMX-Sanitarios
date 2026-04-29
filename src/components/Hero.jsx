@@ -226,7 +226,7 @@ export default function Hero() {
               }}
             />
             <img
-              src="/logo.jpg"
+              src={import.meta.env.BASE_URL + 'logo.jpg'}
               alt="ProMx Sanitarios"
               style={{
                 width: 200, height: 200,

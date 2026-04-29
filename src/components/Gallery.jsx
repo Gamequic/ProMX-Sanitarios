@@ -2,26 +2,28 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
+const B = import.meta.env.BASE_URL
+
 const events = [
-  { img: '/gallery/evento-belinda.jpg', artist: 'Belinda', event: 'Expogan Juárez 2025', date: '17 Oct 2025' },
-  { img: '/gallery/evento-grupo-firme.jpg', artist: 'Grupo Firme', event: 'Expogan Juárez 2025', date: '2 Nov 2025' },
-  { img: '/gallery/evento-tigres-norte.jpg', artist: 'Tigres del Norte', event: 'Expogan Juárez 2025', date: '24 Oct 2025' },
-  { img: '/gallery/evento-chayanne.jpg', artist: 'Chayanne', event: 'Estadio Carta Blanca', date: '28 Abr 2026' },
-  { img: '/gallery/evento-mike-towers.jpg', artist: 'Mike Towers', event: 'Expogan Juárez 2025', date: '25 Oct 2025' },
-  { img: '/gallery/evento-gera-aleman.jpg', artist: 'Gera MX & Alemán', event: 'Expogan Juárez 2025', date: '23 Oct 2025' },
-  { img: '/gallery/evento-india-yuridia.jpg', artist: 'India Yuridia', event: 'Expogan Juárez 2025', date: '19 Oct 2025' },
-  { img: '/gallery/evento-conjunto-primavera.jpg', artist: 'Conjunto Primavera', event: 'Expogan Juárez 2025', date: '16 Oct 2025' },
-  { img: '/gallery/evento-tito-double-p.jpg', artist: 'Tito Double P', event: 'Expogan Juárez 2025', date: '18 Oct 2025' },
-  { img: '/gallery/evento-marca-registrada.jpg', artist: 'Marca Registrada', event: 'Expogan Juárez 2025', date: '30 Oct 2025' },
-  { img: '/gallery/evento-fms.jpg', artist: 'FMS Internacional México', event: 'Plaza de la Mexicanidad', date: '25 Abr 2026' },
+  { img: `${B}gallery/evento-belinda.jpg`, artist: 'Belinda', event: 'Expogan Juárez 2025', date: '17 Oct 2025' },
+  { img: `${B}gallery/evento-grupo-firme.jpg`, artist: 'Grupo Firme', event: 'Expogan Juárez 2025', date: '2 Nov 2025' },
+  { img: `${B}gallery/evento-tigres-norte.jpg`, artist: 'Tigres del Norte', event: 'Expogan Juárez 2025', date: '24 Oct 2025' },
+  { img: `${B}gallery/evento-chayanne.jpg`, artist: 'Chayanne', event: 'Estadio Carta Blanca', date: '28 Abr 2026' },
+  { img: `${B}gallery/evento-mike-towers.jpg`, artist: 'Mike Towers', event: 'Expogan Juárez 2025', date: '25 Oct 2025' },
+  { img: `${B}gallery/evento-gera-aleman.jpg`, artist: 'Gera MX & Alemán', event: 'Expogan Juárez 2025', date: '23 Oct 2025' },
+  { img: `${B}gallery/evento-india-yuridia.jpg`, artist: 'India Yuridia', event: 'Expogan Juárez 2025', date: '19 Oct 2025' },
+  { img: `${B}gallery/evento-conjunto-primavera.jpg`, artist: 'Conjunto Primavera', event: 'Expogan Juárez 2025', date: '16 Oct 2025' },
+  { img: `${B}gallery/evento-tito-double-p.jpg`, artist: 'Tito Double P', event: 'Expogan Juárez 2025', date: '18 Oct 2025' },
+  { img: `${B}gallery/evento-marca-registrada.jpg`, artist: 'Marca Registrada', event: 'Expogan Juárez 2025', date: '30 Oct 2025' },
+  { img: `${B}gallery/evento-fms.jpg`, artist: 'FMS Internacional México', event: 'Plaza de la Mexicanidad', date: '25 Abr 2026' },
 ]
 
 const realPhotos = [
-  { img: '/gallery/sanitarios-expogan.jpg', label: 'Expogan Juárez 2025', sub: 'Sanitarios amarillos en campo' },
-  { img: '/gallery/trailer-vip.jpg', label: 'Remolque VIP', sub: '"Vive la Experiencia" — Sanitarios VIP' },
-  { img: '/gallery/sanitarios-industrial.jpg', label: 'Zona Industrial', sub: 'Fila de unidades en planta' },
-  { img: '/gallery/sanitarios-pares.jpg', label: 'Entrega en sitio', sub: 'Unidades listas para el evento' },
-  { img: '/gallery/sanitario-construccion.jpg', label: 'Obra de construcción', sub: 'Renta mensual disponible' },
+  { img: `${B}gallery/sanitarios-expogan.jpg`, label: 'Expogan Juárez 2025', sub: 'Sanitarios amarillos en campo' },
+  { img: `${B}gallery/trailer-vip.jpg`, label: 'Remolque VIP', sub: '"Vive la Experiencia" — Sanitarios VIP' },
+  { img: `${B}gallery/sanitarios-industrial.jpg`, label: 'Zona Industrial', sub: 'Fila de unidades en planta' },
+  { img: `${B}gallery/sanitarios-pares.jpg`, label: 'Entrega en sitio', sub: 'Unidades listas para el evento' },
+  { img: `${B}gallery/sanitario-construccion.jpg`, label: 'Obra de construcción', sub: 'Renta mensual disponible' },
 ]
 
 function Lightbox({ items, index, onClose, onPrev, onNext }) {
